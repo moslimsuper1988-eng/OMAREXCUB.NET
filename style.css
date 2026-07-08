@@ -1,0 +1,937 @@
+/* ==========================================
+   OMAREXCUB.NET
+   STYLE.CSS
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Cairo',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:#070b16;
+    color:white;
+    overflow-x:hidden;
+
+}
+
+/* الخلفية */
+
+.background{
+
+    position:fixed;
+    inset:0;
+    z-index:-2;
+
+    background:
+    radial-gradient(circle at top,#1f6dff22,transparent 60%),
+    radial-gradient(circle at bottom,#00ffff22,transparent 60%),
+    linear-gradient(135deg,#06070f,#111827,#090b14);
+
+}
+
+/* جسيمات */
+
+.particle{
+
+    position:absolute;
+
+    width:6px;
+    height:6px;
+
+    border-radius:50%;
+
+    background:#55cfff;
+
+    box-shadow:
+    0 0 10px #55cfff,
+    0 0 25px #55cfff;
+
+    animation:floatParticle linear infinite;
+
+}
+
+@keyframes floatParticle{
+
+    0%{
+
+        transform:translateY(0) scale(1);
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:1;
+
+    }
+
+    80%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:translateY(-250px) scale(0);
+        opacity:0;
+
+    }
+
+}
+
+/* الهيدر */
+
+header{
+
+    position:sticky;
+
+    top:0;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 8%;
+
+    backdrop-filter:blur(15px);
+
+    background:rgba(0,0,0,.35);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    z-index:999;
+
+}
+
+/* اللوجو */
+
+.logo h1{
+
+    font-size:42px;
+
+    color:white;
+
+    font-weight:900;
+
+    letter-spacing:2px;
+
+    text-shadow:
+
+    0 0 15px #00eaff,
+
+    0 0 35px #00bfff;
+
+}
+
+.logo span{
+
+    color:#00c8ff;
+
+}
+
+.logo p{
+
+    color:#b9d6ff;
+
+    margin-top:8px;
+
+}
+
+/* القائمة */
+
+nav ul{
+
+    display:flex;
+
+    gap:30px;
+
+    list-style:none;
+
+}
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    transition:.3s;
+
+    position:relative;
+
+}
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-8px;
+
+    left:0;
+
+    width:0;
+
+    height:3px;
+
+    background:#00c8ff;
+
+    transition:.35s;
+
+}
+
+nav a:hover{
+
+    color:#00d9ff;
+
+}
+
+nav a:hover::after{
+
+    width:100%;
+
+}
+
+/* الصفحة الرئيسية */
+
+.hero{
+
+    min-height:90vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px;
+
+}
+
+.hero h2{
+
+    font-size:65px;
+
+    font-weight:900;
+
+    margin-bottom:25px;
+
+    text-shadow:
+
+    0 0 25px cyan,
+
+    0 0 45px #00aaff;
+
+}
+
+.hero p{
+
+    font-size:22px;
+
+    max-width:850px;
+
+    line-height:1.9;
+
+    color:#d0d0d0;
+
+}
+
+/* الزر */
+
+.hero button{
+
+    margin-top:40px;
+
+    border:none;
+
+    outline:none;
+
+    padding:18px 55px;
+
+    border-radius:60px;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    color:white;
+
+    background:linear-gradient(45deg,#00b7ff,#004dff);
+
+    box-shadow:
+
+    0 0 20px #00c8ff,
+
+    0 0 40px #0077ff;
+
+    transition:.35s;
+
+}
+
+.hero button:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+
+    0 0 30px cyan,
+
+    0 0 60px #00bfff;
+
+}
+
+/* الأقسام */
+
+section{
+
+    padding:100px 8%;
+
+}
+
+section h2{
+
+    font-size:45px;
+
+    margin-bottom:40px;
+
+    color:#00d4ff;
+
+    text-align:center;
+
+}
+
+/* الحركات */
+
+.hidden{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:1s;
+
+}
+
+.visible{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+/*=========================================
+    NEWS SECTION
+=========================================*/
+
+.card{
+
+    max-width:900px;
+
+    margin:auto;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    box-shadow:
+    0 0 30px rgba(0,170,255,.35);
+
+    transition:.4s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 0 45px #00bfff;
+
+}
+
+.card h3{
+
+    color:#00d5ff;
+
+    font-size:32px;
+
+    margin-bottom:20px;
+
+}
+
+.card p{
+
+    color:#ddd;
+
+    font-size:19px;
+
+    line-height:1.8;
+
+}
+
+.card button{
+
+    margin-top:30px;
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:15px 40px;
+
+    border-radius:50px;
+
+    color:white;
+
+    font-size:18px;
+
+    background:linear-gradient(45deg,#00c3ff,#005eff);
+
+    transition:.3s;
+
+}
+
+.card button:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 25px cyan;
+
+}
+
+/*=========================================
+    MODS
+=========================================*/
+
+.mods-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+
+    gap:30px;
+
+    margin-top:40px;
+
+}
+
+.mod{
+
+    background:rgba(255,255,255,.07);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    padding:35px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    color:#fff;
+
+    transition:.35s;
+
+    box-shadow:0 0 18px rgba(0,183,255,.2);
+
+}
+
+.mod:hover{
+
+    transform:translateY(-10px) scale(1.04);
+
+    background:#00b7ff;
+
+    color:#06111f;
+
+    box-shadow:
+
+    0 0 30px cyan,
+
+    0 0 60px #00aaff;
+
+}
+
+/*=========================================
+    SERVER
+=========================================*/
+
+#server{
+
+    text-align:center;
+
+}
+
+#server p{
+
+    font-size:20px;
+
+    margin-bottom:25px;
+
+}
+
+#server input{
+
+    width:100%;
+
+    max-width:650px;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    font-size:20px;
+
+    background:#101827;
+
+    color:#00d4ff;
+
+    outline:none;
+
+    box-shadow:0 0 20px rgba(0,191,255,.3);
+
+}
+
+#server button{
+
+    margin-top:25px;
+
+    padding:16px 45px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    color:white;
+
+    background:linear-gradient(45deg,#00b7ff,#0066ff);
+
+    transition:.3s;
+
+}
+
+#server button:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:0 0 30px cyan;
+
+}
+
+/*=========================================
+    YOUTUBE
+=========================================*/
+
+#youtube{
+
+    text-align:center;
+
+}
+
+.youtube-btn{
+
+    display:inline-block;
+
+    margin-top:30px;
+
+    padding:18px 45px;
+
+    border-radius:60px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:20px;
+
+    background:#ff0000;
+
+    transition:.35s;
+
+    box-shadow:0 0 25px rgba(255,0,0,.45);
+
+}
+
+.youtube-btn:hover{
+
+    transform:translateY(-6px);
+
+    background:#ff2d2d;
+
+    box-shadow:
+
+    0 0 35px red,
+
+    0 0 60px red;
+
+}
+/*=========================================
+    POPUP
+=========================================*/
+
+.popup{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    backdrop-filter:blur(8px);
+}
+
+.popup-content{
+    width:90%;
+    max-width:650px;
+    background:#111827;
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    color:white;
+    box-shadow:
+        0 0 35px rgba(0,200,255,.5);
+    animation:popupShow .35s ease;
+}
+
+.popup-content h2{
+    color:#00d4ff;
+    margin-bottom:20px;
+}
+
+.popup-content p{
+    line-height:1.9;
+    color:#ddd;
+    font-size:18px;
+}
+
+.close{
+    float:left;
+    font-size:32px;
+    cursor:pointer;
+    color:#fff;
+    transition:.3s;
+}
+
+.close:hover{
+    color:#00d4ff;
+    transform:rotate(90deg);
+}
+
+@keyframes popupShow{
+
+    from{
+
+        opacity:0;
+        transform:scale(.8);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:scale(1);
+
+    }
+
+}
+
+/*=========================================
+    NOTIFICATION
+=========================================*/
+
+.notification{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    background:#00b7ff;
+
+    color:white;
+
+    padding:15px 25px;
+
+    border-radius:12px;
+
+    font-weight:bold;
+
+    transform:translateY(120px);
+
+    opacity:0;
+
+    transition:.4s;
+
+    box-shadow:0 0 25px cyan;
+
+    z-index:99999;
+
+}
+
+.notification.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/*=========================================
+    TOP BUTTON
+=========================================*/
+
+.topButton{
+
+    position:fixed;
+
+    bottom:30px;
+
+    left:30px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    display:none;
+
+    cursor:pointer;
+
+    font-size:22px;
+
+    color:white;
+
+    background:#00aaff;
+
+    box-shadow:0 0 25px cyan;
+
+    transition:.3s;
+
+    z-index:999;
+
+}
+
+.topButton:hover{
+
+    transform:scale(1.15);
+
+}
+
+/*=========================================
+    CLICK EFFECT
+=========================================*/
+
+.click-effect{
+
+    position:absolute;
+
+    width:15px;
+
+    height:15px;
+
+    border-radius:50%;
+
+    background:rgba(0,255,255,.5);
+
+    pointer-events:none;
+
+    animation:clickAnim .6s linear;
+
+}
+
+@keyframes clickAnim{
+
+    from{
+
+        transform:translate(-50%,-50%) scale(1);
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:translate(-50%,-50%) scale(10);
+
+        opacity:0;
+
+    }
+
+}
+
+/*=========================================
+    FOOTER
+=========================================*/
+
+footer{
+
+    margin-top:80px;
+
+    padding:40px;
+
+    text-align:center;
+
+    background:#08101c;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+footer h2{
+
+    color:#00d4ff;
+
+    margin-bottom:15px;
+
+}
+
+footer p{
+
+    color:#bfbfbf;
+
+}
+
+/*=========================================
+    SCROLL BAR
+=========================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#0b1220;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#00b7ff;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#00dfff;
+
+}
+
+/*=========================================
+    RESPONSIVE
+=========================================*/
+
+@media (max-width:900px){
+
+header{
+
+    flex-direction:column;
+
+    gap:20px;
+
+    text-align:center;
+
+}
+
+nav ul{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+.hero h2{
+
+    font-size:42px;
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+}
+
+.logo h1{
+
+    font-size:30px;
+
+}
+
+section h2{
+
+    font-size:34px;
+
+}
+
+.card{
+
+    padding:25px;
+
+}
+
+.mod{
+
+    font-size:18px;
+
+    padding:25px;
+
+}
+
+#server input{
+
+    font-size:16px;
+
+}
+
+}
+
+/*=========================================
+    THE END
+=========================================*/

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OMAREXCUB.NET</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- خلفية -->
+    <div class="background"></div>
+
+    <!-- الهيدر -->
+    <header>
+
+        <div class="logo">
+
+            <h1>OMAREXCUB<span>.NET</span></h1>
+
+            <p>أفضل موقع لعالم OMAREXCUBMC</p>
+
+        </div>
+
+        <nav>
+
+            <ul>
+
+                <li><a href="#home">الرئيسية</a></li>
+
+                <li><a href="#news">الأخبار</a></li>
+
+                <li><a href="#mods">الجديد</a></li>
+
+                <li><a href="#server">السيرفر</a></li>
+
+                <li><a href="#youtube">يوتيوب</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- الصفحة الرئيسية -->
+
+    <section id="home" class="hero">
+
+        <h2>مرحباً بك في OMAREXCUB.NET</h2>
+
+        <p>
+
+            الموقع الرسمي لسيرفر ماينكرافت
+
+            <strong>OMAREXCUBMC</strong>
+
+        </p>
+
+        <button onclick="scrollToNews()">
+
+            استكشف الموقع
+
+        </button>
+
+    </section>
+
+    <!-- الأخبار -->
+
+    <section id="news">
+
+        <h2>📰 الأخبار</h2>
+
+        <div class="card">
+
+            <h3>تم افتتاح سيرفر OMAREXCUBMC 🎉</h3>
+
+            <p>
+
+                تم افتتاح السيرفر رسمياً!
+
+                الجميع أصبح بإمكانه الانضمام واللعب مع الأصدقاء.
+
+            </p>
+
+            <button onclick="openNews()">
+
+                قراءة الخبر
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- نافذة الخبر -->
+
+    <div id="newsPopup" class="popup">
+
+        <div class="popup-content">
+
+            <span class="close" onclick="closeNews()">&times;</span>
+
+            <h2>افتتاح السيرفر</h2>
+
+            <p>
+
+                يسعدنا الإعلان عن افتتاح سيرفر
+
+                <strong>OMAREXCUBMC</strong>
+
+                لجميع اللاعبين.
+
+                يدعم Java ونسخة Aternos.
+
+                نتمنى لكم وقتاً ممتعاً ❤️
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- الجديد -->
+
+    <section id="mods">
+
+        <h2>🔥 الجديد</h2>
+
+        <div class="mods-grid">
+
+            <div class="mod">INSIDE THE SYSTEM</div>
+
+            <div class="mod">NEW VERTY</div>
+
+            <div class="mod">Better Combat</div>
+
+            <div class="mod">JourneyMap</div>
+
+            <div class="mod">Sodium</div>
+
+        </div>
+
+    </section>
+
+    <!-- السيرفر -->
+
+    <section id="server">
+
+        <h2>🎮 دخول السيرفر</h2>
+
+        <p>
+
+            اضغط على الزر لنسخ IP السيرفر.
+
+        </p>
+
+        <input
+            id="serverIP"
+            value="OMAREXCUBMC.aternos.me:51652"
+            readonly>
+
+        <br><br>
+
+        <button onclick="copyIP()">
+
+            نسخ IP
+
+        </button>
+
+    </section>
+
+    <!-- يوتيوب -->
+
+    <section id="youtube">
+
+        <h2>📺 قناة اليوتيوب</h2>
+
+        <p>
+
+            اشترك ليصلك كل جديد.
+
+        </p>
+
+        <a
+
+            href="https://www.youtube.com/@OMAR_EXCUB"
+
+            target="_blank"
+
+            class="youtube-btn">
+
+            زيارة القناة
+
+        </a>
+
+    </section>
+
+    <!-- الفوتر -->
+
+    <footer>
+
+        <h2>OMAREXCUB.NET</h2>
+
+        <p>
+
+            جميع الحقوق محفوظة © 2026
+
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
