@@ -52,14 +52,50 @@ function closeNews() {
 
 }
 
+
+// ===============================
+// الخبر الثاني
+// ===============================
+function openNews2() {
+
+    const popup = document.getElementById("newsPopup2");
+
+    if (popup) {
+
+        popup.style.display = "flex";
+
+    }
+
+}
+
+function closeNews2() {
+
+    const popup = document.getElementById("newsPopup2");
+
+    if (popup) {
+
+        popup.style.display = "none";
+
+    }
+
+}
+
+
 // إغلاق النافذة عند الضغط خارجها
 window.addEventListener("click", function (e) {
 
     const popup = document.getElementById("newsPopup");
+    const popup2 = document.getElementById("newsPopup2");
 
     if (e.target === popup) {
 
         popup.style.display = "none";
+
+    }
+
+    if (e.target === popup2) {
+
+        popup2.style.display = "none";
 
     }
 
